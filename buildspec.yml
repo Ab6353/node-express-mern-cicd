@@ -5,7 +5,7 @@ env:
 phases:
   pre_build:
     commands:
-       - sed -i 's/mongodb_url/'$MONGO_URL'/' app.js
+       - echo MONGODB_URI=$MONGO_URL > .env
        - echo Build Started on `date`
   build:
     commands:
