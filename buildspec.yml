@@ -1,0 +1,19 @@
+version: 0.2
+env: 
+  parameter-store: 
+    MONGO_URL: "/vivek/mongouri"
+phases:
+  pre_build:
+    commands:
+       - echo Build Started on `date`
+  build:
+    commands:
+       - sed -i 's/mongodb://localhost/conduit/'$MONGO_URL'/' app.js
+       - npm install
+  post_build:
+    commands:
+       - echo Build Completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
