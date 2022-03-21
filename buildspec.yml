@@ -8,7 +8,7 @@ phases:
        - echo Build Started on `date`
   build:
     commands:
-       - sed -i 's/mongodb://localhost/conduit/'$MONGO_URL'/' app.js
+       - sed -i 's/mongodb_url/'$MONGO_URL'/' app.js
        - npm install
   post_build:
     commands:
