@@ -5,10 +5,10 @@ env:
 phases:
   pre_build:
     commands:
+       - sed -i 's/mongodb_url/'$MONGO_URL'/' app.js
        - echo Build Started on `date`
   build:
     commands:
-       - sed -i 's/mongodb_url/'$MONGO_URL'/' app.js
        - npm install
   post_build:
     commands:
