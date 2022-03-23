@@ -5,7 +5,7 @@ process_status=$(pm2 list | grep 'app' | awk '{print$18}')
 
 if [ $process_status == 'online' ]
 then
-        pm2 stop /home/ubuntu/node-app/app.js
+        sudo pm2 stop /home/ubuntu/node-app/app.js
         echo "process stoped successfully"
 else
         echo "no process was running"
