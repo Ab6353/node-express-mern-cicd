@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #getting the status of process in variable process_status
-process_status=$(pm2 list | grep 'app' | awk '{print$18}')
+process_status=$(sudo pm2 list | grep 'app' | awk '{print$18}')
 
 if [ $process_status == 'online' ]
 then
