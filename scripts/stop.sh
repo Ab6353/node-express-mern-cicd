@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /home/ubuntu/node-app
 #getting the status of process in variable process_status
 process_status=$(sudo pm2 list | grep 'app' | awk '{print$18}')
 
