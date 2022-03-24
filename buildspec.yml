@@ -2,9 +2,7 @@ version: 0.2
 env: 
   parameter-store: 
     MONGO_URL: "/vivek/mongouri"
-phases:
- # install:
-  #  -nodejs: 12  
+phases:  
     
   pre_build:
     commands:
