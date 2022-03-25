@@ -1,0 +1,37 @@
+version: 0.2
+
+run-as: root
+
+env:
+    parameter-store:
+        MONGODB_DEV_URI: "/ashutosh/mern/mongodb_ip"
+        PORT: "/ashutosh/mern/port"
+
+phases:
+    
+    # Nothing to install 
+    install:
+        commands:
+            - echo "Installed Packages!!!"
+
+    # Changing configuration in pre-build phase
+    pre_build:
+        commands:
+            - sed -i 's/your_app_port_here/'$PORT'/' ecosystem.config.js
+            - sed -i "s|your_mongodb_uri_here|$MONGODB_DEV_URI|" ecosystem.config.js
+            - npm i
+
+    # Nothing to build
+    build:
+        commands:
+            - echo "Build Done!!!"
+
+    # Nothing for post build, just testing the service
+    post_build:
+        commands:
+            - echo "Post-Build Done!!!"
+
+# Copy all file in current repo to artifact - S3
+artifacts:
+        files:
+           - '**/*'
