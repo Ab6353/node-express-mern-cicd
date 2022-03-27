@@ -17,8 +17,6 @@ phases:
     # Changing configuration in pre-build phase
     pre_build:
         commands:
-            - sed -i 's/your_app_port_here/'$PORT'/' ecosystem.config.js
-            - sed -i "s|your_mongodb_uri_here|$MONGODB_DEV_URI|" ecosystem.config.js
             - npm i
 
     # Nothing to build
