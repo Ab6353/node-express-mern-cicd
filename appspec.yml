@@ -5,7 +5,7 @@ os: linux
 # install
 files: 
     - source: .
-      destination: /home/ubuntu/conduit
+      destination: /home/ubuntu/node-express-mern-cicd
 
 hooks:
     ApplicationStop:
