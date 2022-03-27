@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/ubuntu/conduit
-sudo pm2 start ecosystem.config.js
+cd /home/ubuntu/node-express-mern-cicd
+sudo pm2 start app.js
