@@ -17,7 +17,7 @@ phases:
     # Changing configuration in pre-build phase
     pre_build:
         commands:
-            - npm i
+            - echo "pre build done"
 
     # Nothing to build
     build:
