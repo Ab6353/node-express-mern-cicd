@@ -2,10 +2,10 @@ version: 0.2
 
 run-as: root
 
-env:
-    parameter-store:
-        MONGODB_DEV_URI: "/ashutosh/mern/mongodb_ip"
-        PORT: "/ashutosh/mern/port"
+#env:
+#    parameter-store:
+ #       MONGODB_DEV_URI: "/ashutosh/mern/mongodb_ip"
+ #       PORT: "/ashutosh/mern/port"
 
 phases:
     
