@@ -33,7 +33,7 @@ if (!isProduction) {
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect('mongodb://10.0.143.151:27017,10.0.131.149:27017,10.0.132.0:27017/conduit?replicaSet=rs0');
+  mongoose.connect('process.env.mongodb_cluster_ip');
   mongoose.set('debug', true);
 }
 
@@ -41,6 +41,7 @@ require('./models/User');
 require('./models/Article');
 require('./models/Comment');
 require('./config/passport');
+require('dotenv').config() //for env var
 
 app.use(require('./routes'));
 
