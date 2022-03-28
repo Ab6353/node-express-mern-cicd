@@ -2,10 +2,10 @@ version: 0.2
 
 run-as: root
 
-#env:
-#    parameter-store:
- #       MONGODB_DEV_URI: "/ashutosh/mern/mongodb_ip"
- #       PORT: "/ashutosh/mern/port"
+env:
+    parameter-store:
+        MONGODB_URL: "/ashutosh/mern/mongodb_ip"
+        PORT: "/ashutosh/mern/port"
 
 phases:
     
@@ -17,7 +17,8 @@ phases:
     # Changing configuration in pre-build phase
     pre_build:
         commands:
-            - echo "pre build done"
+            - echo MONGODB_URI=$MONGO_URL > .env
+            - echo PORT=$PORT >> .env
 
     # Nothing to build
     build:
