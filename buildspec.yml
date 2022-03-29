@@ -13,6 +13,7 @@ phases:
     install:
         commands:
             - echo "Installed Packages!!!"
+            
 
     # Changing configuration in pre-build phase
     pre_build:
@@ -24,6 +25,8 @@ phases:
     build:
         commands:
             - echo "Build Done!!!"
+            - sudo npm install
+           
 
     # Nothing for post build, just testing the service
     post_build:
