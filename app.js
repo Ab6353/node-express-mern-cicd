@@ -42,7 +42,7 @@ require('./models/User');
 require('./models/Article');
 require('./models/Comment');
 require('./config/passport');
-require('dotenv').config() //for env var
+
 
 app.use(require('./routes'));
 
