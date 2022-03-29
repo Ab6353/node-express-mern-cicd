@@ -17,7 +17,7 @@ phases:
     # Changing configuration in pre-build phase
     pre_build:
         commands:
-            - echo MONGODB_URI=$MONGO_URL > .env
+            - echo MONGODB_URI=$MONGODB_URL > .env
             - echo PORT=$PORT >> .env
 
     # Nothing to build
