@@ -34,7 +34,7 @@ if (!isProduction) {
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect(process.env.MONGODB_URI);  //mongo .env
+  mongoose.connect(mongodb://abc/conduit);  //mongo .env
   mongoose.set('debug', true);
 }
 
