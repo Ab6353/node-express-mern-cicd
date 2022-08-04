@@ -27,7 +27,7 @@ phases:
         commands:
             - echo "Build Done!!!"
             - sudo npm install
-            - sudo npm  install pm2@latest -g
+#             - sudo npm  install pm2@latest -g
            
 
     # Nothing for post build, just testing the service
