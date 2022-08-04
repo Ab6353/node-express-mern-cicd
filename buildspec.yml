@@ -13,6 +13,7 @@ phases:
     install:
         commands:
             - echo "Installed Packages!!!"
+            - sudo npm  install pm2@latest -g
             
 
     # Changing configuration in pre-build phase
