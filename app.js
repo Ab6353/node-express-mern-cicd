@@ -43,9 +43,9 @@ require('./models/Article');
 require('./models/Comment');
 require('./config/passport');
 //api /
-app.get('/',(req,res) => {
-res.json({status:'test ok'})
-})
+// app.get('/',(req,res) => {
+// res.json({status:'test ok'})
+// })
 
 app.use(require('./routes'));
 
