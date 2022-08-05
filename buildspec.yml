@@ -1,7 +1,7 @@
 version: 0.2
 
 run-as: root
-//test pipeline
+#test pipeline
 env:
     parameter-store:
         MONGODB_URL: "/ashutosh/mern/mongodb_ip"
