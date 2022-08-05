@@ -5,7 +5,7 @@ run-as: root
 env:
     parameter-store:
         MONGODB_URL: "/ashutosh/mern/mongodb_ip"
-        PORT: "/ashutosh/mern/port"
+        #PORT: "/ashutosh/mern/port"
 
 phases:
     
